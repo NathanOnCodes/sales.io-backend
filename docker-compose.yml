@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.3
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=secret
+    container_name: salespostgres
+    volumes:
+      - salespostgres:/var/lib/salespostgres/data
+    ports:
+      - '5432:5432'
+volumes:
+  salespostgres:
