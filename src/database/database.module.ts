@@ -10,7 +10,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'admin',
       password: 'secret',
       database: 'salespostgres',
-      entities: [],
+      entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
       synchronize: true,
       autoLoadEntities: true,
     }),
