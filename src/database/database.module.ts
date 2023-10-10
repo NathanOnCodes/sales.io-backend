@@ -11,8 +11,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: 'secret',
       database: 'salespostgres',
       entities: [`${__dirname}/../**/*.entity{.ts,.js}`],
-      synchronize: true,
-      autoLoadEntities: true,
+      migrations: [`${__dirname}/../migrations/*{.ts,.js}`],
+      migrationsRun: true,
     }),
   ],
 })
